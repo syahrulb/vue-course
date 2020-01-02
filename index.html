@@ -16,6 +16,7 @@
       <h2> {{myObjectarray[1].nama}}</h2>
       <h3> {{sayHi('bastomy') }} </h3>
       <h3 v-show="boleanValue" v-html="code"> </h3>
+      <input type="text" v-on:input="changeTitle">
     </div>
   </body>
   <script type="text/javascript">
@@ -36,6 +37,9 @@
       methods :{
         sayHi : function(name){
           return "hy "+name;
+        },
+        changeTitle : function(event){
+          this.judul = event.target.value;
         }
       }
     });
