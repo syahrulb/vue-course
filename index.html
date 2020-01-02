@@ -11,17 +11,19 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{judul}}</h1>
+      <h1 v-show="boleanValue">{{judul}}</h1>
       <h2> {{myArray[0]}}</h2>
       <h2> {{myObjectarray[1].nama}}</h2>
       <h3> {{sayHi('bastomy') }} </h3>
+      <h3 v-show="boleanValue" v-html="code"> </h3>
     </div>
   </body>
   <script type="text/javascript">
-    new Vue({
+    var vm = new Vue({
       el:"#app",
       data :{
         judul : "vue beginner",
+        code : "<p>belajar pemrograman </p>",
         number : 6,
         boleanValue : true,
         myArray :["tom", "tam", "tim","tum"],
