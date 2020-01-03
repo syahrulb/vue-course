@@ -17,6 +17,8 @@
       <h3> {{sayHi('bastomy') }} </h3>
       <h3 v-show="boleanValue" v-html="code"> </h3>
       <input type="text" v-on:input="changeTitle">
+      <br>
+      <img :src="myPicture.src" :alt="myPicture.alt" :href='myPicture.href' height="200" width="200">
     </div>
   </body>
   <script type="text/javascript">
@@ -29,10 +31,11 @@
         boleanValue : true,
         myArray :["tom", "tam", "tim","tum"],
         myObjectarray :[
-        {nama : "tomy" ,umur :27},
-        {nama : "murni" ,umur :25},
-        {nama : "anna" ,umur :29},
-        ]
+          {nama : "tomy" ,umur :27},
+          {nama : "murni" ,umur :25},
+          {nama : "anna" ,umur :29},
+        ],
+        myPicture:{src:'./asset/bongo.jpg',alt:'bongocat',href:'#'}
       },
       methods :{
         sayHi : function(name){
