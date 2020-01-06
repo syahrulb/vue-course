@@ -18,7 +18,9 @@
       <h3 v-show="boleanValue" v-html="code"> </h3>
       <input type="text" v-on:input="changeTitle">
       <br>
-      <img :src="myPicture.src" :alt="myPicture.alt" :href='myPicture.href' height="200" width="200">
+      <img :src="myPicture.src" :alt="myPicture.alt" v-on:href='myPicture.href' height="200" width="200">
+      <button class="btn btn-primary" @click="pesan">click</button>
+      <!-- <input v-on:keyup.enter="output(this.value)"/> -->
     </div>
   </body>
   <script type="text/javascript">
@@ -43,7 +45,13 @@
         },
         changeTitle : function(event){
           this.judul = event.target.value;
-        }
+        },
+        pesan : function(event){
+          console.log(event);
+        },
+        // output: function(data){
+        //   console.log(data);
+        // }
       }
     });
   </script>
