@@ -36,7 +36,8 @@
       <button type="button" class="btn btn-danger" @click="angkaKedua++">Angka 2 ++</button><br>
       <h1>{{compA}}</h1>
       <h1>{{compB}}</h1>
-      <div :class="{ myClass : active, myClass2:active2}"></div>
+      <div :class="{ myClass : active, myClass2:active2}"></div><br>
+      <div :style="{backgroundColor: myColor, height : myValue, width :myValue}"></div>
     </div>
   </body>
   <script type="text/javascript">
@@ -58,6 +59,8 @@
         myPicture:{src:'./asset/bongo.jpg',alt:'bongocat',href:'#'},
         active :true,
         active2 :true,
+        myColor : "red",
+        myValue : "100px",
       },
       methods :{
         sayHi : function(name){
