@@ -21,6 +21,11 @@
       <img :src="myPicture.src" :alt="myPicture.alt" v-on:href='myPicture.href' height="200" width="200">
       <button class="btn btn-primary" @click="pesan">click</button>
       <!-- <input v-on:keyup.enter="output(this.value)"/> -->
+      </br>
+      <button type="button" class="btn btn-success" @click="angkaPertama++">Angka 1 ++</button><br>
+      <button type="button" class="btn btn-danger" @click="angkaKedua++">Angka 2 ++</button><br>
+      <h1>{{compA}}</h1>
+      <h1>{{compB}}</h1>
     </div>
   </body>
   <script type="text/javascript">
@@ -37,6 +42,8 @@
           {nama : "murni" ,umur :25},
           {nama : "anna" ,umur :29},
         ],
+        angkaPertama :0,
+        angkaKedua :0,
         myPicture:{src:'./asset/bongo.jpg',alt:'bongocat',href:'#'}
       },
       methods :{
@@ -52,6 +59,14 @@
         // output: function(data){
         //   console.log(data);
         // }
+      },
+      computed:{
+        compA : function(){
+          return this.angkaPertama;
+        },
+        compB : function(){
+          return this.angkaKedua;
+        }
       }
     });
   </script>
