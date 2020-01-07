@@ -37,7 +37,28 @@
       <h1>{{compA}}</h1>
       <h1>{{compB}}</h1>
       <div :class="{ myClass : active, myClass2:active2}"></div><br>
-      <div :style="{backgroundColor: myColor, height : myValue, width :myValue}"></div>
+      <div :style="{backgroundColor: myColor, height : myValue, width :myValue}"></div><br>
+      <h1 v-if="false">hello</h1>
+      <h1 v-else=>hi</h1>
+      <hi v-if="value ==1">1</hi>
+      <hi v-else-if="value ==2">2</hi>
+      <hi v-else-if="value ==3">3</hi>
+      <hi v-else-if="value ==4">4</hi>
+      <h1 v-else=>tidak ada angka di data base</h1>
+      <ul>
+        <li v-for="(x, index) in myArray">{{index}} {{ x }}</li>
+      </ul>
+      <input type="checkbox" v-model="active">
+      <h1>{{active}}</h1>
+      <input type="radio" value="male" v-model="gender">
+      <input type="radio" value="female" v-model="gender">
+      <hi>{{gender}}</hi><br>
+      <select class="" v-model="selection">
+        <option value="male">male</option>
+        <option value="female">femele</option>
+        <option value="no">no entry</option>
+      </select>
+      <h1>{{selection}}</h1>
     </div>
   </body>
   <script type="text/javascript">
@@ -61,6 +82,9 @@
         active2 :true,
         myColor : "red",
         myValue : "100px",
+        value : 7,
+        gender : "",
+        selection: "",
       },
       methods :{
         sayHi : function(name){
